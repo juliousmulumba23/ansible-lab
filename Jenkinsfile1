@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  stages {
+    stage('Hello') {
+      steps {
+        sh '''
+          hostname
+          java -version
+          uname -r
+          ansible -i hosts devplaybooktestrh8 -m setup
+        '''
+      }
+    }
+  }
+}
