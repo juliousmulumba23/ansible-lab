@@ -1,0 +1,14 @@
+---
+- hosts: "{{ hosts }}"
+
+  tasks:
+    - name: remove file hey.txt
+      file:
+        path: /tmp/hey.txt
+        state: present
+      notify:
+        - display a word
+
+  handlers:
+    - name: display a word
+      shell: echo "file has been deleted" >> /tmp/my_file   
