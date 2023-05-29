@@ -1,0 +1,13 @@
+pipeline {
+  agent {label 'dev'}
+  environment {
+  ANSIBLE_PRIVATE_KEY=credentials('ansible')
+  }
+  stages {
+    stage('Hello') {
+      steps {
+        sh 'ansible-playbook -i hosts --private-key=$ANSIBLE_PRIVATE_KEY echo.yml'
+      }
+    }
+  }
+}
