@@ -8,6 +8,9 @@
         state: touch
       notify:
         - display a word
+        
+    - name: reboot remote host
+      shell: reboot
 
   handlers:
     - name: display a word
