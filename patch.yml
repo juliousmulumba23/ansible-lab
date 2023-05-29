@@ -1,8 +1,5 @@
 ---
 - hosts: devservers
-  remote_user: root
-  become_method: sudo
-  become: yes
 
   tasks:
     - name: check for update
