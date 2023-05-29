@@ -1,5 +1,5 @@
-[dev-servers]
-devplaybooktestrh8
+[devservers]
+devplaybooktestrh8 ansible_user=jenkins
 
 
 
