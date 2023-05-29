@@ -2,10 +2,10 @@
 - hosts: devservers
 
   tasks:
-    - name: remove file hey.txt
+    - name: create file under /tmp
       file:
         path: /tmp/hey.txt
-        state: present
+        state: touch
       notify:
         - display a word
 
